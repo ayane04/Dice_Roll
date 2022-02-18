@@ -8,17 +8,20 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var diceImage : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener { rollDice() }
+        diceImage = findViewById(R.id.dice_image)
     }
 
     private fun rollDice() {
         val randomInt = (1..6).random()
-
 //        Toast.makeText(this, "button clicked",
 //            Toast.LENGTH_SHORT).show()
         val resultText: TextView = findViewById(R.id.result_text)
