@@ -38,9 +38,12 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
 
+
         diceImage.setImageResource(drawableResource)
 
     }
+
+
 
 
 }
